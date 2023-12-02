@@ -80,7 +80,29 @@ fun MainView(
                 }
             }
         ) { paddingValues ->  
-            Box(modifier = Modifier.padding(paddingValues))
+            Box(modifier = Modifier.padding(paddingValues)) {
+                when (selectedIndex.intValue) {
+                    0 -> TimeZoneScreen(
+                        currentTimezoneStrings = currentTimezoneStrings
+                    )
+                    1 -> FindMeetingScreen(currentTimezoneStrings)
+                }
+                if (showAddDialog.value) {
+                    AddTimeZoneDialog(
+                        onAdd = { newTimezones ->
+                            showAddDialog.value = false
+                            for (zone in newTimezones) {
+                                if (!currentTimezoneStrings.contains(zone)) {
+                                    currentTimezoneStrings.add(zone)
+                                }
+                            }
+                        },
+                        onDismiss = {
+                            showAddDialog.value = false
+                        },
+                    )
+                }
+            }
         }
     }
 }
