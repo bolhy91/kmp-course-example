@@ -20,7 +20,7 @@ navigation="2.7.4"
 material3 = "1.2.0-alpha09"
 kotlinxDateTime = "0.4.1"
 napier = "2.6.1"
-composePlugin = "1.5.1"
+composePlugin = "1.5.10"
 multiplatformPlugin = "1.9.20"
 
 
