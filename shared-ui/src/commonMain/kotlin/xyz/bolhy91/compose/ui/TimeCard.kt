@@ -1,4 +1,4 @@
-package xyz.bolhy91.kmp_kodeco_example.android.ui
+package xyz.bolhy91.compose.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -19,7 +19,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -101,10 +100,4 @@ fun TimeCard(timezone: String, hours: Double, time: String, date: String) {
 
         }
     }
-}
-
-@Preview
-@Composable
-fun TimeCardPreview() {
-    TimeCard(timezone = "Etc/UTC", hours = 0.0, time = "00:00", date = "Sunday, 1 January")
 }

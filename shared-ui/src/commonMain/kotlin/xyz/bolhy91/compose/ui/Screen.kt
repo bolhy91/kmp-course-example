@@ -1,4 +1,4 @@
-package xyz.bolhy91.kmp_kodeco_example.android
+package xyz.bolhy91.compose.ui
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Language

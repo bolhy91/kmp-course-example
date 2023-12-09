@@ -1,4 +1,4 @@
-package xyz.bolhy91.kmp_kodeco_example.android.ui
+package xyz.bolhy91.compose.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -22,18 +22,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.window.Dialog
-import xyz.bolhy91.kmp_kodeco_example.android.R
-
+@Composable
+expect fun MeetingDialogWrapper(onDismiss: onDismissType, content: @Composable () -> Unit)
 @Composable
 fun MeetingDialog(
     hours: List<Int>,
-    onDismiss: () -> Unit
-) = Dialog(
-    onDismissRequest = onDismiss
+    onDismiss: onDismissType
 ) {
+
+    MeetingDialogWrapper(onDismiss) {
+
     Surface(
         border = BorderStroke(width = 1.dp, color = Color.Black),
         shape = RoundedCornerShape(8.dp),
@@ -86,9 +85,10 @@ fun MeetingDialog(
                     onDismiss()
                 }
             ) {
-                Text(text = stringResource(id = R.string.done))
+                Text(text = "Done")
             }
 
         }
+    }
     }
 }

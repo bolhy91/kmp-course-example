@@ -27,7 +27,7 @@ kotlin {
                 api(compose.materialIconsExtended)
 
                 implementation(project(":shared"))
-//            implementation(project(":shared-ui"))
+                implementation(project(":shared-ui"))
             }
         }
     }
@@ -41,7 +41,7 @@ compose.desktop {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "FindTime"
             macOS {
-                bundleID = "com.kodeco.findtime"
+                bundleID = "xyz.bolhy91.kmp_kodeco_example"
             }
         }
     }

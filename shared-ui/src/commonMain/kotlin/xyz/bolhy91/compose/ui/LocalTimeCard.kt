@@ -1,8 +1,7 @@
-package xyz.bolhy91.kmp_kodeco_example.android.ui
+package xyz.bolhy91.compose.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -19,23 +18,24 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import xyz.bolhy91.kmp_kodeco_example.android.endGradientColor
-import xyz.bolhy91.kmp_kodeco_example.android.startGradientColor
 
 @Composable
 fun LocalTimeCard(city: String, time: String, date: String) {
-    Box(modifier = Modifier
-        .fillMaxWidth()
-        .height(140.dp)
-        .background(MaterialTheme.colorScheme.background)
-        .padding(8.dp)) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(140.dp)
+            .background(MaterialTheme.colorScheme.background)
+            .padding(8.dp)
+    ) {
         Card(
             shape = RoundedCornerShape(8.dp),
             border = BorderStroke(1.dp, Color.Black),
-            modifier = Modifier.fillMaxWidth()
-        ) {
+            modifier = Modifier
+                .fillMaxWidth()
+        )
+        {
             Box(
                 modifier = Modifier
                     .background(
@@ -50,8 +50,7 @@ fun LocalTimeCard(city: String, time: String, date: String) {
             ) {
                 Row(
                     modifier = Modifier
-                        .fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween
+                        .fillMaxWidth()
                 ) {
                     Column(
                         horizontalAlignment = Alignment.Start
@@ -59,14 +58,15 @@ fun LocalTimeCard(city: String, time: String, date: String) {
                     ) {
                         Spacer(modifier = Modifier.weight(1.0f))
                         Text(
-                            "Your Location", style = MaterialTheme.typography.bodySmall
+                            "Your Location", style = MaterialTheme.typography.labelSmall
                         )
                         Spacer(Modifier.height(8.dp))
                         Text(
-                            city, style = MaterialTheme.typography.headlineSmall
+                            city, style = MaterialTheme.typography.labelLarge
                         )
                         Spacer(Modifier.height(8.dp))
                     }
+                    Spacer(modifier = Modifier.weight(1.0f))
                     Column(
                         horizontalAlignment = Alignment.End
                     ) {
@@ -82,13 +82,6 @@ fun LocalTimeCard(city: String, time: String, date: String) {
                     }
                 }
             }
-
         }
     }
-}
-
-@Preview
-@Composable
-fun LocalTimeCardPreview() {
-    LocalTimeCard("City", "Time", "Date")
 }

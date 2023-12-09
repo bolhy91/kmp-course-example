@@ -8,7 +8,7 @@ android {
     compileSdk = 34
     defaultConfig {
         applicationId = "xyz.bolhy91.kmp_kodeco_example.android"
-        minSdk = 21
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -46,7 +46,8 @@ android {
 }
 
 dependencies {
-    implementation(projects.shared)
+    implementation(project(":shared"))
+    implementation(project(":shared-ui"))
     implementation(platform(libs.compose.bom))
     implementation(libs.bundles.compose.ui)
     implementation(libs.bundles.androidx.activity)

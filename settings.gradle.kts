@@ -20,3 +20,4 @@ rootProject.name = "kmp-kodeco-example"
 include(":androidApp")
 include(":shared")
 include(":desktop")
+include(":shared-ui")

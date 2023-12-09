@@ -1,4 +1,4 @@
-package xyz.bolhy91.kmp_kodeco_example.android.ui
+package xyz.bolhy91.compose.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues

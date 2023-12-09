@@ -1,4 +1,4 @@
-package xyz.bolhy91.kmp_kodeco_example.android.ui
+package xyz.bolhy91.compose.ui
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
@@ -21,8 +21,6 @@ import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import xyz.bolhy91.kmp_kodeco_example.android.MyApplicationTheme
-import xyz.bolhy91.kmp_kodeco_example.android.bottomNavigationItems
 
 @Composable
 fun MainView(
